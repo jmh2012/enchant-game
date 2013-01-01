@@ -1,4 +1,6 @@
 Simple game using enchant.js, a framework for developing simple games in HTML5/javascript.
 
+Basically you're a dot trying to dodge other dots.
+
 enchant.js -
 http://enchantjs.com/
