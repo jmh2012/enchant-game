@@ -11,21 +11,18 @@ window.onload = function () {
 	redSprite.x = 100; redSprite.y = 100;
 	game.rootScene.addChild(graySprite);
 	game.rootScene.addChild(redSprite);
-
 	// Move red block.
         game.rootScene.on('touchmove', function(evt) {
 	    redSprite.y = evt.localY;
 	    redSprite.x = evt.localX;
         });
-
+	// Detect collision on enter frame.
 	game.rootScene.on('enterframe', function(){
 	    if (redSprite.intersect(graySprite)) {
 		alert("Game Over.");
 		game.stop();
 	    }
 	});
-	
-	
 	game.pushScene(game.rootScene);
     };
     game.start();
